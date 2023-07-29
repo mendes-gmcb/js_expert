@@ -7,13 +7,26 @@
     "test": "test"
   },
   "scripts": {
-    "seed": "node ./seed",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha -w ./test/**/*.test.js",
+    "test:cov": "npx nyc npx mocha ./test/**/*.test.js",
+    "seed": "node ./seed"
   },
-  "keywords": ["tdd", "test", "javascript"],
+  "keywords": [
+    "tdd",
+    "test",
+    "javascript"
+  ],
   "author": "Gabriel Mendes",
   "license": "MIT",
   "dependencies": {
     "faker": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.1",
+    "@types/sinon": "^10.0.15",
+    "chai": "^4.2.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^15.2.0"
   }
 }
